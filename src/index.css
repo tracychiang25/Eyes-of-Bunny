@@ -1,17 +1,93 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.header {
+  position: relative;
+  height: 120px;
+  background-color: white;
+}
+
+.logoContainer {
+  position: absolute;
+  top: 55%; /*top edge alligns with the 55% edge of the container*/
+  left: 50%; /*left edge of the element at 50% of the width of its containing element*/
+  transform: translate(
+    -50%,
+    /*push to the left*/ -55% /*push to the top*/
+  ); /*since the item itself is not centered, Shift this element left by 50% of its own width, and up by 50% of its own height.*/
+}
+
+.logo {
+  height: 50px;
+  /* object-fit: contain; */
+}
+
+.iconContainer {
+  position: absolute;
+  top: 35%;
+  right: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 25px;
+  color: gray;
+  margin-left: 15px;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contentWrap {
+  flex: 1; /*  makes the content area grow and push footer down */
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  color: black;
+  /* position: absolute; */
+  bottom: 0;
+  /* left: 0; */
+  width: 100%;
+  background-color: transparent;
+}
+.footerLink {
+  margin-right: 10px;
+}
+
+.aboutBackground {
+  margin: 0 auto;
+  background-image: url("./assets/place\ holder.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 80vw;
+  height: 80vw;
+  display: flex; /* optional for centering content */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
