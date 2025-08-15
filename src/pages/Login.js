@@ -1,10 +1,5 @@
-function Login(){
-
-    return(
-         <h1>test login</h1>
-
-    )
-   
+function Login() {
+  return <></>;
 }
 
 export default Login;

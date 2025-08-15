@@ -12,6 +12,7 @@ html,
 #root {
   height: 100%;
   margin: 0;
+  overflow-x: hidden;
 }
 
 code {
@@ -51,6 +52,12 @@ code {
   font-size: 25px;
   color: gray;
   margin-left: 15px;
+}
+
+.ant-carousel .slick-dots {
+  position: absolute;
+  bottom: 40px; /* move dots higher if needed */
+  z-index: 2; /* make sure they're above images */
 }
 
 .pageContainer {
